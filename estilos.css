@@ -194,8 +194,49 @@ html {
     padding-top: 50px;
 }
 
+.cuadro-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.recuadro-proyectos{
+    margin-bottom: 1rem;
+    flex: 1 1 30%;
+    text-align:left;
+    background-color: rgb(0, 37, 219, 0.2);
+    box-shadow: 0px 0px 8px rgb(47, 93, 167, 0.6);
+}
+
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.proyecto h1 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.proyecto p {
+    margin-top: 0.5rem;
+    margin-left: 15px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.proyecto a {
+    color: #86702D;
+    text-decoration: none;
+}
+
 #contacto {
     background-color: rgb(0, 37, 219, 0.2);
+    font-size: 1.5em;
     min-height: 70vh;
     padding-top: 50px;
 }
