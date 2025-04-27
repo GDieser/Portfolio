@@ -196,11 +196,86 @@
         </section>
 
         <section id="contacto" class="secciones">
-            <div class="contenedor">
-                <h1>📧 Contacto</h1>
-                <p>Formulario de contacto/datos</p>
-            </div>
+            <div class="contenedor-contacto">
+                <h1>📧 Contacto.</h1>
 
+                <div class="contenido-contacto">
+
+                    <div class="info-contacto">
+                        <p>
+                            <img src="icons/logo13.png" alt="Mail" height="30px">
+                            germandieser@gmail.com
+                        </p>
+                        <p>
+                            <img src="icons/logo12.png" alt="Ubicación" height="30px">
+                            Buenos Aires, Argentina.
+                        </p>
+
+                        <div class="redes">
+                            <a href="https://github.com/GDieser" target="_blank">
+                                <img src="icons/logo7.png" alt="GitHub" height="50px">
+                            </a>
+                            <a href="https://www.linkedin.com/in/german-dieser/" target="_blank">
+                                <img src="icons/logo11.png" alt="LinkedIn" height="50px">
+                            </a>
+                        </div>
+                    </div>
+
+                    <form id="form" action="https://formspree.io/f/xqaqanvd" method="POST" class="formulario-contacto">
+                        <label>
+                            Nombre:
+                            <div>
+                                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+                        </label>
+                        <label>
+                            Mail:
+                            <div>
+                                <input type="email" name="email" placeholder="Tu mail" required>
+                            </div>
+                        </label>
+
+                        <label>
+                            Mensaje:
+                            <div>
+                                <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+                            </div>
+                        </label>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                <!--Codiog para poder evitar la redireccion a Formspree-->
+                    <script>
+                        //Asigno
+                        const $form = document.querySelector('#form');
+                        $form.addEventListener('submit', handleSubmit);
+                        
+                        //Creamos funcion
+                        async function handleSubmit(event) {
+                            
+                            event.preventDefault();
+
+                            //Guardamos los datos del form
+                            const form = new FormData(this);
+                            //metodo fetch
+                            const response = await fetch(this.action, {
+                                method: this.method,
+                                body: form,
+                                headers: {
+                                    'Accept': 'application/json'
+                                }
+                            });
+                            //Msjito para el usuario
+                            if (response.ok) {
+                                this.reset();
+                                alert('Enviado, me pondré en contacto.');
+                            }
+                        }//Gracias Leonidas!
+                    </script>
+
+                </div>
+            </div>
         </section>
     </main>
 
