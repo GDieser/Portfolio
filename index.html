@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,42 +9,88 @@
     <title>Porfolio GDieser </title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
     <!--Parte superior -->
     <header class="cabezera">
-        <h1>GDieser</h1>
-
-        <nav>
-            <ul>
-                <li> <a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="contenedor-cabezera">
+            <h1>GDieser</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
 
     </header>
 
     <!--El cuerpo general -->
     <main>
         <section id="inicio" class="secciones">
-            <h1>Germán J.E. Dieser</h1>
-            <img src="https://avatars.githubusercontent.com/u/108766666?s=400&u=48ed8343b1cc40b73e5fd86551641010d06116a7&v=4" alt="GDieser">
-            <p>Acá una breve introduccion</p>
+            <div class="contenedor-inicio">
+                <img class="foto-perfil"
+                    src="https://avatars.githubusercontent.com/u/108766666?s=400&u=48ed8343b1cc40b73e5fd86551641010d06116a7&v=4"
+                    alt="GDieser">
+                <div>
+                    <h1>Germán J.E. Dieser</h1>
+                    <h2>Back-End Developer.</h2>
+
+                    <p>Desarollador, estudiante, diseñador y músico.</p>
+                </div>
+            </div>
+
         </section>
 
-        <section id="sobre-mi"class="secciones">
-            <h1>Sobre mí.</h1>
-            <p>Descripcion mas amplia</p>
-            
+        <section id="sobre-mi" class="secciones">
+            <div>
+                <h1>Sobre mí.</h1>
+                <p>Hola! Soy desarollador Back-End, Estudiante de la Tecnicatura Universitaria en Programación </p>
+                <p>en UTN-FRGP, con sólidos conocimientos en programación estructurada, POO, SQL Server. </p>
+                <p>Entuciasta desarollador de video juegos con Unity.</p>
+                <br>
+                <div>
+                    <h2>Educación:</h2>
+                    <div>
+                        <p>UTN-FRGP</p>
+                        <p>Talento-Tech</p>
+                        <p>Platzi</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Tecnologías:</h2>
+                    <div>
+                        <div>
+                            <img src="icons/logo1.png" alt="C++">
+                            <img src="icons/logo2.png" alt="C#">
+                            <img src="icons/logo3.png" alt="SQL">
+                            <img src="icons/logo4.png" alt="HTML">
+                            <img src="icons/logo5.png" alt="CSS">
+                        </div>
+                        <div>
+                            <img src="icons/logo6.png" alt="Git">
+                            <img src="icons/logo7.png" alt="GitHub">
+                            <img src="icons/logo8.png" alt="Python">
+                            <img src="icons/logo9.png" alt="Unity">
+                            <img src="icons/logo10.png" alt="Blender">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
         </section>
 
-        <section id="proyectos"class="secciones">
+        <section id="proyectos" class="secciones">
             <h1>Proyectos</h1>
             <p>Mis poryectos</p>
         </section>
 
-        <section id="contacto"class="secciones">
+        <section id="contacto" class="secciones">
             <h1>Contacto</h1>
             <p>Formulario de contacto/datos</p>
         </section>
@@ -55,4 +102,5 @@
         &copy;2025 Germán J.E. Dieser.
     </footer>
 </body>
+
 </html>
