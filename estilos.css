@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh;
     background: linear-gradient(120deg, #26275B, #131453, #252775, #12143C, #2B2B45);
     background-size: 600% 600%;
     animation: gradientBG 15s ease infinite;
@@ -13,21 +14,24 @@ body {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
 
+
 html {
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
 }
 
-.cabezera{
-    background-color:  rgb(50, 51, 96, 0.4);
-    position:fixed;
+.cabezera {
+    background-color: rgb(50, 51, 96, 0.4);
+    position: fixed;
     top: 0;
     width: 100%;
 }
@@ -40,12 +44,12 @@ html {
     height: 60px;
 }
 
-.cabezera h1{
+.cabezera h1 {
     color: #e0e0e0;
 }
 
 .cabezera nav ul {
-    text-align:end;
+    text-align: end;
 }
 
 .cabezera nav ul li {
@@ -58,7 +62,7 @@ html {
     text-decoration: none;
     font-weight: bold;
     padding: 5px 5px;
-    
+
 }
 
 .cabezera nav ul li a:hover,
@@ -66,7 +70,7 @@ html {
     color: #00AFDB;
 }
 
-.foto-perfil{
+.foto-perfil {
     height: 250px;
     border-radius: 250px;
 }
@@ -87,7 +91,7 @@ html {
 
 .secciones {
     padding: 80px 20px 40px 20px;
-    
+
     width: 100%;
 }
 
@@ -133,19 +137,19 @@ html {
     padding-top: 50px;
 }
 
-#sobre-mi h1{
+#sobre-mi h1 {
     font-size: 2.5em;
     color: #e0e0e0;
     margin-bottom: 3.5rem;
 }
 
-#sobre-mi h2{
+#sobre-mi h2 {
     font-size: 2em;
     color: #e0e0e0;
     margin-bottom: 2rem;
 }
 
-#sobre-mi p{
+#sobre-mi p {
     line-height: 2;
     font-size: 1.5em;
     color: #e0e0e0;
@@ -157,19 +161,20 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem; 
+    gap: 2rem;
 }
 
 .icono {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     text-align: center;
 }
 
 #sobre-mi .icono p {
-    margin-top: 0.1rem;;
-    font-size: 1rem; 
+    margin-top: 0.1rem;
+    ;
+    font-size: 1rem;
     color: #e0e0e0;
 }
 
@@ -189,7 +194,7 @@ html {
 .recuadro-educacion {
     margin-bottom: 1rem;
     flex: 1 1 30%;
-    text-align:left;
+    text-align: left;
     background-color: rgb(30, 30, 47, 0.5);
     box-shadow: 0px 0px 8px rgb(47, 93, 167, 0.6);
 }
@@ -223,10 +228,10 @@ html {
     margin-top: 2rem;
 }
 
-.recuadro-proyectos{
+.recuadro-proyectos {
     margin-bottom: 1rem;
     flex: 1 1 30%;
-    text-align:left;
+    text-align: left;
     background-color: rgb(0, 37, 219, 0.2);
     box-shadow: 0px 0px 8px rgb(47, 93, 167, 0.6);
 }
@@ -258,7 +263,7 @@ html {
 
 #contacto {
     color: #e0e0e0;
-    text-align:left;
+    text-align: left;
     padding: 50px 20px;
     font-size: 1.5em;
 }
@@ -308,6 +313,7 @@ html {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 1rem;
+
 }
 
 .formulario-contacto textarea {
@@ -336,9 +342,137 @@ footer {
     text-align: center;
     padding: 30px;
     margin-top: 40px;
-    background-color:  rgb(50, 51, 96, 0.4);
+    background-color: rgb(50, 51, 96, 0.4);
     color: #e0e0e0;
     font-size: 0.9em;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
 }
 
+/* Responsive y moviles.... :(*/
 
+@media (max-width: 600px) {
+
+    body {
+        background: linear-gradient(120deg, #26275B, #131453, #252775, #12143C, #2B2B45);
+        background-size: cover;
+    }
+
+    .contenedor-cabezera {
+        display: none;
+    }
+
+    .foto-perfil {
+        height: 150px;
+    }
+
+    .contenedor-inicio {
+        flex-direction: column;
+    }
+
+    .introduccion {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .secciones {
+        padding: 40px 10px;
+    }
+
+    #inicio h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #inicio h2 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    #inicio p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    #sobre-mi h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #sobre-mi h2 {
+        text-align: center;
+        font-size: 1.6em;
+    }
+
+    #sobre-mi p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .iconos {
+        gap: 1rem;
+    }
+
+    #proyectos {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .cuadro-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    #proyectos iframe {
+        width: 350px;
+        height: 200px;
+    }
+
+    .recuadro-proyectos {
+        padding: 10px;
+    }
+
+    #contacto {
+        text-align: center;
+        font-size: 1.2em;
+        padding: 30px 20px;
+    }
+
+    .contenedor-contacto {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .contenido-contacto {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .info-contacto {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .formulario-contacto {
+        order: 2;
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .formulario-contacto input,
+    .formulario-contacto textarea,
+    .formulario-contacto button {
+        width: 100%;
+    }
+
+}
