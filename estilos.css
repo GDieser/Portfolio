@@ -1,7 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     min-height: 100vh;
     background: linear-gradient(120deg, #26275B, #131453, #252775, #12143C, #2B2B45);
     background-size: 600% 600%;
@@ -44,8 +43,13 @@ html {
     height: 60px;
 }
 
-.cabezera h1 {
+.cabezera h1{
+    margin: 10px;
+}
+
+.cabezera h1 a{
     color: #e0e0e0;
+    text-decoration: none;
 }
 
 .cabezera nav ul {
@@ -89,10 +93,15 @@ html {
     padding: 0 20px;
 }
 
+.redes{
+    display: flex;
+    gap: 50px;
+    padding: 10px 20px;
+}
+
+/*Aca se rompe*/
 .secciones {
     padding: 80px 20px 40px 20px;
-
-    width: 100%;
 }
 
 .contenedor {
@@ -120,27 +129,26 @@ html {
     font-size: 1em;
     color: #e0e0e0;
     margin-bottom: 0.5rem;
+    margin-bottom: 30px;
 }
 
-#inicio p {
+#inicio h3 {
     font-family: 'Press Start 2P', monospace;
     text-align: left;
     font-size: 1.5em;
     color: #e0e0e0;
-    margin-bottom: 1rem;
+    margin-top: 50px;
 }
 
 #sobre-mi {
     border-bottom: 1px groove rgb(65, 68, 204, 0.4);
-    margin: 30px 0;
-    min-height: 70vh;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 #sobre-mi h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #e0e0e0;
-    margin-bottom: 3.5rem;
+    
 }
 
 #sobre-mi h2 {
@@ -151,8 +159,8 @@ html {
 
 #sobre-mi p {
     line-height: 2;
-    font-size: 1.5em;
-    color: #e0e0e0;
+    font-size: 1.3em;
+    color: #e0e0e0bd;
     margin-bottom: 2rem;
 }
 
@@ -173,9 +181,8 @@ html {
 
 #sobre-mi .icono p {
     margin-top: 0.1rem;
-    ;
     font-size: 1rem;
-    color: #e0e0e0;
+    color: #e0e0e0bd;
 }
 
 #sobre-mi img {
@@ -203,13 +210,13 @@ html {
     margin-bottom: 10px;
     margin-left: 10px;
     font-size: 1.5em;
-    color: #fdfdfd;
+    color: #e0e0e0;
 }
 
 .recuadro-educacion li {
     font-style: italic;
     font-size: 1.2em;
-    color: #aeaeae;
+    color: #e0e0e0bd;
 }
 
 #proyectos {
@@ -218,7 +225,7 @@ html {
     margin: 30px 0;
     font-size: 1.5em;
     min-height: 70vh;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .cuadro-proyectos {
@@ -253,7 +260,7 @@ html {
     margin-top: 0.5rem;
     margin-left: 15px;
     font-size: 1rem;
-    color: #e0e0e0;
+    color: #e0e0e0bd;
 }
 
 .proyecto a {
@@ -264,7 +271,7 @@ html {
 #contacto {
     color: #e0e0e0;
     text-align: left;
-    padding: 50px 20px;
+    padding: 10px 20px;
     font-size: 1.5em;
 }
 
@@ -275,7 +282,6 @@ html {
 
 .contenido-contacto {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 2rem;
@@ -291,7 +297,7 @@ html {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    color: #e0e0e0;
+    color: #e0e0e0bd;
 }
 
 .info-contacto img {
@@ -343,23 +349,48 @@ footer {
     padding: 30px;
     margin-top: 40px;
     background-color: rgb(50, 51, 96, 0.4);
-    color: #e0e0e0;
+    color: #e0e0e0bd;
     font-size: 0.9em;
-    box-sizing: border-box;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Responsive y moviles.... :(*/
-
-@media (max-width: 600px) {
-
+@media (max-width: 1200px ) {
     body {
-        background: linear-gradient(120deg, #26275B, #131453, #252775, #12143C, #2B2B45);
+        background: linear-gradient(180deg, #26275B, #131453, #252775, #12143C, #2B2B45);
         background-size: cover;
     }
 
     .contenedor-cabezera {
+        display:inline;
+    }
+
+    .cabezera h1 {
+        display: none;
+    }
+
+    #proyectos iframe {
+        width: 400px;
+        height: 250px;
+    }
+
+
+    footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px ) {
+
+    body {
+        background: linear-gradient(180deg, #26275B, #131453, #252775, #12143C, #2B2B45);
+        background-size: cover;
+    }
+
+    .contenedor-cabezera {
+        display:inline;
+    }
+
+    .cabezera h1 {
         display: none;
     }
 
@@ -369,6 +400,10 @@ footer {
 
     .contenedor-inicio {
         flex-direction: column;
+    }
+
+    .redes{
+        justify-content: center;
     }
 
     .introduccion {
@@ -390,7 +425,7 @@ footer {
         font-size: 1.2em;
     }
 
-    #inicio p {
+    #inicio h3 {
         text-align: center;
         font-size: 1.2em;
     }
@@ -470,9 +505,12 @@ footer {
     }
 
     .formulario-contacto input,
-    .formulario-contacto textarea,
-    .formulario-contacto button {
+    .formulario-contacto textarea {
         width: 100%;
+    }
+
+    .formulario-contacto button {
+        width:auto;
     }
 
 }
