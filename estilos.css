@@ -185,10 +185,6 @@ html {
     color: #e0e0e0bd;
 }
 
-#sobre-mi img {
-    height: 60px;
-}
-
 
 .contenedor-educacion {
     display: flex;
@@ -206,11 +202,41 @@ html {
     box-shadow: 0px 0px 8px rgb(47, 93, 167, 0.6);
 }
 
+.recuadro-educacion img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.contenedor-educacion h3, a{
+    font-size: 1em;
+    color: #e0e0e0bd
+}
+
+.contenedor-educacion a{
+    font-size: 1em;
+    color:#00AFDB;
+}
+
+.recuadro-educacion a {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 1em;
+    color: #00AFDB;
+}
+
 .recuadro-educacion h3 {
     margin-bottom: 10px;
     margin-left: 10px;
     font-size: 1.5em;
     color: #e0e0e0;
+}
+
+.recuadro-educacion h4 {
+    margin-bottom: 10px;
+    margin-left: 15px;
+    font-size: 1em;
+    color: #e0e0e0bd;
 }
 
 .recuadro-educacion li {
