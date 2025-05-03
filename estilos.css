@@ -23,9 +23,23 @@ body {
     }
 }
 
-
 html {
     scroll-behavior: smooth;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    display: none;
+    font-size: 2rem;
+    color: #e0e0e0;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1001;
 }
 
 .cabezera {
@@ -43,11 +57,11 @@ html {
     height: 60px;
 }
 
-.cabezera h1{
+.cabezera h1 {
     margin: 10px;
 }
 
-.cabezera h1 a{
+.cabezera h1 a {
     color: #e0e0e0;
     text-decoration: none;
 }
@@ -93,7 +107,7 @@ html {
     padding: 0 20px;
 }
 
-.redes{
+.redes {
     display: flex;
     gap: 50px;
     padding: 10px 20px;
@@ -148,7 +162,7 @@ html {
 #sobre-mi h1 {
     font-size: 2em;
     color: #e0e0e0;
-    
+
 }
 
 #sobre-mi h2 {
@@ -208,14 +222,15 @@ html {
     margin-bottom: 15px;
 }
 
-.contenedor-educacion h3, a{
+.contenedor-educacion h3,
+a {
     font-size: 1em;
     color: #e0e0e0bd
 }
 
-.contenedor-educacion a{
+.contenedor-educacion a {
     font-size: 1em;
-    color:#00AFDB;
+    color: #00AFDB;
 }
 
 .recuadro-educacion a {
@@ -387,14 +402,14 @@ footer {
 }
 
 /* Responsive y moviles.... :(*/
-@media (max-width: 1200px ) {
+@media (max-width: 1200px) {
     body {
         background: linear-gradient(180deg, #26275B, #131453, #252775, #12143C, #2B2B45);
         background-size: cover;
     }
 
     .contenedor-cabezera {
-        display:inline;
+        display: inline;
     }
 
     .cabezera h1 {
@@ -406,28 +421,47 @@ footer {
         height: 250px;
     }
 
-
-    footer {
-        width: 100%;
-    }
 }
 
-@media (max-width: 900px ) {
+@media (max-width: 900px) {
 
     body {
         background: linear-gradient(180deg, #26275B, #131453, #252775, #12143C, #2B2B45);
         background-size: cover;
     }
 
-    .contenedor-cabezera {
-        
-        font-size: 0.8rem;
-        display:inline;
-        
+    .menu-icono {
+        display: block;
     }
 
     .cabezera h1 {
         display: none;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(50, 51, 96, 0.2);
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    #menu:checked~.navbar {
+        display: block;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
     }
 
     .foto-perfil {
@@ -438,7 +472,7 @@ footer {
         flex-direction: column;
     }
 
-    .redes{
+    .redes {
         justify-content: center;
     }
 
@@ -546,7 +580,7 @@ footer {
     }
 
     .formulario-contacto button {
-        width:auto;
+        width: auto;
     }
 
 }
