@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+
     <!--Parte superior -->
     <header class="cabezera">
         <div class="contenedor-cabezera">
@@ -25,12 +27,31 @@
             <label for="menu" class="menu-icono">☰</label>
 
             <nav class="navbar">
+
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li>
+                        <ul class="lang es active">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#sobre-mi">Sobre mí</a></li>
+                            <li><a href="#proyectos">Proyectos</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                        </ul>
+                        <ul class="lang en">
+                            <li><a href="#inicio">Home</a></li>
+                            <li><a href="#sobre-mi">About me</a></li>
+                            <li><a href="#proyectos">Projects</a></li>
+                            <li><a href="#contacto">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label class="switch">
+                            <span class="lang-label">Es / En</span>
+                            <input type="checkbox" id="ckbTraduccion" onchange="switchLang()">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
                 </ul>
+
             </nav>
         </div>
 
@@ -45,7 +66,17 @@
                         src="https://avatars.githubusercontent.com/u/108766666?s=400&u=48ed8343b1cc40b73e5fd86551641010d06116a7&v=4"
                         alt="GDieser">
                     <div>
-                        <h3>Hola!✋ soy</h3>
+                        <!--
+                        <label class="switch">
+                            <input type="checkbox" id="ckbTraduccion" onchange="switchLang()">
+                            <span class="slider round"></span>
+                        </label>
+                        
+                        <button class="btn btn-dark" onclick="switchLang('en')">En</button>
+                        <button class="btn btn-dark" onclick="switchLang('es')">Es</button>
+                        -->
+                        <h3 class="lang es active">Hola!✋ soy</h3>
+                        <h3 class="lang en">Hi!✋ I'm</h3>
                         <h1>Germán J.E. Dieser.</h1>
                         <h2>Back-End Developer.</h2>
                         <div class="redes">
@@ -63,71 +94,111 @@
 
         </section>
 
-        <section id="sobre-mi" class="secciones">
+        <section id="sobre-mi" class="secciones" class="lang es active">
             <div class="contenedor">
-                <h1>📄 Sobre mí.</h1>
-                <p>
+                <h1 class="lang es active">📄 Sobre mí.</h1>
+                <h1 class="lang en">📄 About me.</h1>
+                <p class="lang es active">
                     Soy desarrollador Back-End y estudiante de la Tecnicatura Universitaria en Programación en UTN-FRGP
                     desde 2024. Me especializo en programación estructurada, POO y bases de datos con SQL Server.
                 </p>
-                <p>
+                <p class="lang en">
+                    I'm a Back-End developer and a student of the University Technician in Programming at UTN-FRGP since
+                    2024. I specialize in structured programming, OOP, and databases with SQL Server.
+                </p>
+                <p class="lang es active">
                     Además de mi formación académica, me capacito de manera continua en plataformas como Platzi y estoy
                     ampliando mis habilidades en el desarrollo y diseño de videojuegos con Unity.👾
                 </p>
-                <p>
+                <p class="lang en">
+                    In addition to my academic background, I continuously train on platforms like Platzi and I'm
+                    expanding my skills in game development and design using Unity.👾
+                </p>
+                <p class="lang es active">
                     Soy un entusiasta de la informática y la tecnología, siempre buscando nuevos proyectos y
                     oportunidades para seguir aprendiendo y aportar valor a cada equipo del que forme parte.
                 </p>
+                <p class="lang en">
+                    I'm passionate about computers and technology, always looking for new projects and opportunities to
+                    keep learning and add value to every team I'm part of.
+                </p>
                 <br>
                 <div>
-                    <h2>Educación:</h2>
+                    <h2 class="lang es active">Educación:</h2>
+                    <h2 class="lang en">Education:</h2>
                     <div class="contenedor-educacion">
                         <div class="recuadro-educacion">
-                            <h3>✔ UTN-FRGP (2024-Presente)</h3>
-                            <ul>
+                            <h3 class="lang es active">✔ UTN-FRGP (2024-Presente)</h3>
+                            <h3 class="lang en">✔ UTN-FRGP (2024-Present)</h3>
+                            <ul class="lang es active">
                                 <li>Tecnicatura Universitaria en Programación</li>
+                            </ul>
+                            <ul class="lang en">
+                                <li>University Technician in Programming</li>
                             </ul>
                         </div>
                         <div class="recuadro-educacion">
-                            <h3>✔ Talento-Tech (2024-Presente)</h3>
-                            <ul>
+                            <h3 class="lang es active">✔ Talento-Tech (2024-Presente)</h3>
+                            <h3 class="lang en">✔ Talento-Tech (2024-Present)</h3>
+                            <ul class="lang es active">
                                 <li>Programación con Python</li>
                                 <li>Desarrolo con Unity</li>
                             </ul>
+                            <ul class="lang en">
+                                <li>Programming with Python</li>
+                                <li>Development with Unity</li>
+                            </ul>
                         </div>
                         <div class="recuadro-educacion">
-                            <h3>✔ Platzi (Presente)</h3>
-                            <ul>
+                            <h3 class="lang es active">✔ Platzi (Presente)</h3>
+                            <h3 class="lang en">✔ Platzi (Present)</h3>
+                            <ul class="lang es active">
                                 <li>Programacion Back-End con C#</li>
                                 <li>Ingles</li>
+                                <li>Unity</li>
+                            </ul>
+                            <ul class="lang en">
+                                <li>Back-End Programming with C#</li>
+                                <li>English</li>
                                 <li>Unity</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <h2>Cursos:</h2>
+                <h2 class="lang es active">Cursos:</h2>
+                <h2 class="lang en">Courses:</h2>
                 <div class="contenedor-educacion">
                     <div class="recuadro-educacion">
-                        <h4>Bases de Datos SQL - <a href="https://maxiprograma.com/"> MaxiPrograma </a> </h4>
+                        <h4 class="lang es active">Bases de Datos SQL - <a href="https://maxiprograma.com/">
+                                MaxiPrograma </a> </h4>
+                        <h4 class="lang en">SQL Databases - <a href="https://maxiprograma.com/">MaxiPrograma</a></h4>
                         <img width="350" height="250"
                             src="https://live.staticflickr.com/65535/54487378777_125e1c8138_k.jpg" alt="">
 
                     </div>
                     <div class="recuadro-educacion">
-                        <h4>C# Nivel 1 - <a href="https://maxiprograma.com/"> MaxiPrograma </a> </h4>
+                        <h4 class="lang es active">C# Nivel 1 - <a href="https://maxiprograma.com/"> MaxiPrograma </a>
+                        </h4>
+                        <h4 class="lang en">C# Level 1 - <a href="https://maxiprograma.com/">MaxiPrograma</a></h4>
                         <img width="350" height="250"
                             src="https://live.staticflickr.com/65535/54488224246_4898a9d50e_h.jpg" alt="">
                     </div>
                     <div class="recuadro-educacion">
-                        <h4>Interfaces de Unity - <a href="https://platzi.com/cursos/introduccion-interfaz-unity/">
+                        <h4 class="lang es active">Interfaces de Unity - <a
+                                href="https://platzi.com/cursos/introduccion-interfaz-unity/">
                                 Platzi </a> </h4>
+                        <h4 class="lang en">Unity Interfaces - <a
+                                href="https://platzi.com/cursos/introduccion-interfaz-unity/">Platzi</a></h4>
                         <img width="350" height="250"
                             src="https://live.staticflickr.com/65535/54488224201_07045dbd12_h.jpg" alt="">
                     </div>
                     <div class="recuadro-educacion">
-                        <h4>C# - Buenas Prácticas - <a href="https://platzi.com/cursos/clean-code-csharp/"> Platzi </a>
+                        <h4 class="lang es active">C# - Buenas Prácticas - <a
+                                href="https://platzi.com/cursos/clean-code-csharp/"> Platzi </a>
                         </h4>
+                        <h4 class="lang en">C# - Best Practices - <a
+                                href="https://platzi.com/cursos/clean-code-csharp/">Platzi</a></h4>
                         <img width="350" height="250"
                             src="https://live.staticflickr.com/65535/54488505633_aa851cb7b6_h.jpg" alt="">
 
@@ -139,17 +210,23 @@
                             src="https://live.staticflickr.com/65535/54488575345_969b274cc0_h.jpg" alt="">
                     </div>
                     <div class="recuadro-educacion">
-                        <h4>Programación con Python - <a href="https://talentotech.bue.edu.ar/#/"> TalentoTech </a>
+                        <h4 class="lang es active">Programación con Python - <a
+                                href="https://talentotech.bue.edu.ar/#/"> TalentoTech </a>
                         </h4>
+                        <h4 class="lang en">Programming with Python - <a
+                                href="https://talentotech.bue.edu.ar/#/">TalentoTech</a></h4>
                         <img width="350" height="250"
                             src="https://live.staticflickr.com/65535/54488505693_9f71008746_k.jpg" alt="">
                     </div>
-                    <h3>Ver más: <a
+                    <h3 class="lang es active">Ver más: <a
+                            href="https://www.linkedin.com/in/german-dieser/details/certifications/">LinkedIn</a></h3>
+                    <h3 class="lang en">See more: <a
                             href="https://www.linkedin.com/in/german-dieser/details/certifications/">LinkedIn</a></h3>
                 </div>
 
                 <div>
-                    <h2>Tecnologías:</h2>
+                    <h2 class="lang es active">Tecnologías:</h2>
+                    <h2 class="lang en">Technologies:</h2>
                     <div class="iconos">
                         <div class="icono">
                             <img height="60px" src="icons/logo1.png" alt="C++">
@@ -199,9 +276,11 @@
 
         </section>
 
+
         <section id="proyectos" class="secciones">
             <div class="contenedor">
-                <h1>🕹️ Proyectos.</h1>
+                <h1 class="lang es active">🕹️ Proyectos.</h1>
+                <h1 class="lang en">🕹️ Projects.</h1>
                 <div class="cuadro-proyectos">
                     <div class="proyecto">
                         <div class="recuadro-proyectos">
@@ -210,15 +289,24 @@
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <h1>‣ Proyecto Programación 3 - <a href="https://github.com/GDieser/tp-winform-equipo-12A"
-                                    target="_blank">Ver
+                            <h1 class="lang es active">‣ Proyecto Programación 3 - <a
+                                    href="https://github.com/GDieser/tp-winform-equipo-12A" target="_blank">Ver
                                     repositorio</a></h1>
-                            <p>
+                            <h1 class="lang en">‣ Programming 3 Project - <a
+                                    href="https://github.com/GDieser/tp-winform-equipo-12A" target="_blank">View
+                                    repository</a></h1>
+                            <p class="lang es active">
                                 Aplicación de escritorio desarollada en C# con WinForms (.NET Framework) para la
                                 gestión de un articulos. Incluye alta, baja, modificación y consulta (CRUD) de
                                 diferentes artículos, con base de datos en SQL Server. El proyecto incorpora manejo de
                                 excepciones,
                                 conexión a base de datos y fue realizado en Visual Studio Community.
+                            </p>
+                            <p class="lang en">
+                                Desktop application developed in C# with WinForms (.NET Framework) for item management.
+                                It includes create, read, update, and delete (CRUD) operations for various items, using
+                                a SQL Server database. The project features exception handling, database connection, and
+                                was built in Visual Studio Community.
                             </p>
                         </div>
 
@@ -230,21 +318,35 @@
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <h1>‣ Proyecto Programación 1 - <a href="https://github.com/GDieser/Programacion-1-TPI-v0.1"
-                                    target="_blank">Ver
+                            <h1 class="lang es active">‣ Proyecto Programación 1 - <a
+                                    href="https://github.com/GDieser/Programacion-1-TPI-v0.1" target="_blank">Ver
                                     repositorio</a></h1>
-                            <h1>‣ Proyecto P1 Remake - <a href="https://github.com/GDieser/Embaucados-TPI-Remake"
-                                    target="_blank">Ver
+                            <h1 class="lang en">‣ Programming 1 Project - <a
+                                    href="https://github.com/GDieser/Programacion-1-TPI-v0.1" target="_blank">View
+                                    repository</a></h1>
+                            <h1 class="lang es active">‣ Proyecto P1 Remake - <a
+                                    href="https://github.com/GDieser/Embaucados-TPI-Remake" target="_blank">Ver
                                     repositorio</a></h1>
-                            <p>
+                            <h1 class="lang en">‣ P1 Remake Project - <a
+                                    href="https://github.com/GDieser/Embaucados-TPI-Remake" target="_blank">View
+                                    repository</a></h1>
+                            <p class="lang es active">
                                 Proyecto final de un juego de cartas llamado Embaucado, desarrollado en consola con C++,
                                 aplicando programación estructurada, condicionales, ciclos, funciones y vectores. El
                                 proyecto abarca los conceptos básicos de programación y me permitió promocionar la
                                 materia.
                             </p>
-                            <p>
+                            <p class="lang en">
+                                Final project for a card game called "Embaucado", developed in C++ console using
+                                structured programming, conditionals, loops, functions, and vectors. The project covers
+                                the basics of programming and helped me pass the course.
+                            </p>
+                            <p class="lang es active">
                                 Además, realice un pequeño remake del mismo utilizando RLutil para manejar un apartado
                                 gráfico.
+                            </p>
+                            <p class="lang en">
+                                I also created a small remake using RLutil to include a graphical interface.
                             </p>
                         </div>
 
@@ -257,11 +359,14 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                            <h1>‣ Proyecto Programación 2 - <a
+                            <h1 class="lang es active">‣ Proyecto Programación 2 - <a
                                     href="https://github.com/GDieser/TPI-PII-2024-Final-Aprobado-.git"
                                     target="_blank">Ver
                                     repositorio</a></h1>
-                            <p>
+                            <h1 class="lang en">‣ Programming 2 Project - <a
+                                    href="https://github.com/GDieser/TPI-PII-2024-Final-Aprobado-.git"
+                                    target="_blank">View repository</a></h1>
+                            <p class="lang es active">
                                 Proyecto final de un sistema de administración de gimnasio, una aplicación de consola
                                 con C++,
                                 aplicando programación orientada a objetos, punteros, memoria dinámica y manejo de
@@ -269,6 +374,13 @@
                                 gerentes, entrenadores y socios, control de pagos, administración de ejercicios y
                                 rutinas, estadísticas e informes exportados a Excel, utilizando archivos .dat como base
                                 de datos.
+                            </p>
+                            <p class="lang en">
+                                Final project for a gym management system, a C++ console application using
+                                object-oriented programming, pointers, dynamic memory, and file handling. The program
+                                includes manager menus, CRUD operations for managers, trainers, and members, payment
+                                control, exercise and routine management, statistics, and reports exported to Excel
+                                using `.dat` files as a database.
                             </p>
                         </div>
 
@@ -280,10 +392,13 @@
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <h1>‣ Proyecto: Top Down Shooter - Unity 2D (En proceso) - <a
+                            <h1 class="lang es active">‣ Proyecto: Top Down Shooter - Unity 2D (En proceso) - <a
                                     href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">Ver
                                     repositorio</a></h1>
-                            <p>
+                            <h1 class="lang en">‣ Project: Top Down Shooter - Unity 2D (In Progress) - <a
+                                    href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">View
+                                    repository</a></h1>
+                            <p class="lang es active">
                                 Proyecto realizado en Unity 2D, para Talento Tech, Shooter Top Down. Se implementaron
                                 Tilemaps para la construcción del entorno y sprites personalizados.
                                 Se utilizó el sistema de físicas 2D de Unity para gestionar colisiones, detección de
@@ -293,6 +408,15 @@
                                 layers y Sorting Groups para una correcta organización visual. El sistema de colisiones,
                                 junto con scripts personalizados, permite una interacción fluida entre el jugador, los
                                 enemigos y el entorno.
+                            </p>
+                            <p class="lang en">
+                                Project created in Unity 2D for Talento Tech. It’s a Top Down Shooter that uses Tilemaps
+                                for building environments and custom sprites. Unity’s 2D physics system manages
+                                collisions, hit detection, and dynamic behaviors. The game lighting includes dynamic
+                                lights and shadows using the Universal Render Pipeline (URP). The game logic was
+                                developed in C#, and tools like compositing layers and Sorting Groups were used for
+                                proper visual organization. The collision system, together with custom scripts, ensures
+                                smooth interaction between the player, enemies, and environment.
                             </p>
                         </div>
 
@@ -304,7 +428,8 @@
 
         <section id="contacto" class="secciones">
             <div class="contenedor-contacto">
-                <h1>📧 Contacto.</h1>
+                <h1 class="lang es active">📧 Contacto.</h1>
+                <h1 class="lang en">📧 Contact.</h1>
 
                 <div class="contenido-contacto">
 
@@ -329,27 +454,46 @@
                     </div>
 
                     <form id="form" action="https://formspree.io/f/xqaqanvd" method="POST" class="formulario-contacto">
-                        <label>
+                        <label class="lang es active">
                             Nombre:
                             <div>
                                 <input type="text" name="nombre" placeholder="Tu nombre" required>
                             </div>
                         </label>
-                        <label>
+                        <label class="lang en">
+                            Name:
+                            <div>
+                                <input type="text" name="nombre" placeholder="Your name" required>
+                            </div>
+                        </label>
+                        <label class="lang es active">
                             Mail:
                             <div>
                                 <input type="email" name="email" placeholder="Tu mail" required>
                             </div>
                         </label>
+                        <label class="lang en">
+                            Email:
+                            <div>
+                                <input type="email" name="email" placeholder="Your email" required>
+                            </div>
+                        </label>
 
-                        <label>
+                        <label class="lang es active">
                             Mensaje:
                             <div>
                                 <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
                             </div>
                         </label>
+                        <label class="lang en">
+                            Message:
+                            <div>
+                                <textarea name="mensaje" placeholder="Your message" required></textarea>
+                            </div>
+                        </label>
 
-                        <button type="submit">Enviar</button>
+                        <button class="lang es active" type="submit">Enviar</button>
+                        <button type="submit" class="lang en">Send</button>
                     </form>
 
                     <!--Codiog para poder evitar la redireccion a Formspree-->
@@ -388,10 +532,34 @@
         <script>
             const menu = document.querySelector('.menu');
             const nav = document.querySelector('.cabezera nav');
-        
+
             menu.addEventListener('click', () => {
                 nav.classList.menu('active');
             });
+        </script>
+
+        <script>
+            function switchLang() {
+
+                var checkbox = document.getElementById("ckbTraduccion");
+
+                if (checkbox.checked) {
+                    document.querySelectorAll('.lang').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.' + 'en').forEach(el => {
+                        el.classList.add('active');
+                    });
+                }
+                else {
+                    document.querySelectorAll('.lang').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.' + 'es').forEach(el => {
+                        el.classList.add('active');
+                    });
+                }
+            }
         </script>
 
     </main>
