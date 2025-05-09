@@ -191,6 +191,17 @@ html {
     padding: 10px 20px;
 }
 
+.redes img{
+    transition: transform 0.3s ease;
+    filter: brightness(0.8);
+    
+}
+
+.redes img:hover{
+    transform: scale(1.6);
+    filter: brightness(1);
+}
+
 /*Aca se rompe*/
 .secciones {
     padding: 80px 20px 40px 20px;
@@ -269,6 +280,18 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+}
+
+.icono img{
+    transition: transform 0.3s ease;
+    filter: brightness(0.8);
+    
+}
+
+.icono img:hover{
+    transform: scale(1.6);
+    filter: brightness(1);
 }
 
 #sobre-mi .icono p {
