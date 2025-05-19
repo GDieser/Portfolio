@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Unity</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+</head>
+
+<body class="body-unity">
+    <header class="cabezera">
+        <div class="contenedor-cabezera">
+            <h1><a href="#inicio">GDieser🔥</a></h1>
+
+            <input type="checkbox" id="menu" />
+            <label for="menu" class="menu-icono">☰</label>
+
+            <nav class="navbar">
+
+                <ul>
+                    <li>
+                        <ul class="lang es active">
+                            <li><a href="index.html">Principal</a></li>
+                            <li><a href="Unity.html">Unity</a></li>
+                        </ul>
+                        <ul class="lang en">
+                            <li><a href="#inicio">Home</a></li>
+                            <li><a href="#sobre-mi">About me</a></li>
+                            <li><a href="#proyectos">Projects</a></li>
+                            <li><a href="#contacto">Contact</a></li>
+                            <li><a href="Unity.html">Unity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label class="switch">
+                            <span class="lang-label">Es / En</span>
+                            <input type="checkbox" id="ckbTraduccion" onchange="switchLang()">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="inicio" class="secciones">
+            <div class="contenedor">
+                <div class="contenedor-inicio">
+                    <img class="foto-perfil"
+                        src="https://avatars.githubusercontent.com/u/108766666?s=400&u=48ed8343b1cc40b73e5fd86551641010d06116a7&v=4"
+                        alt="GDieser">
+                    <div>
+                        <h3 class="lang es active">Hola!✋ soy</h3>
+                        <h3 class="lang en">Hi!✋ I'm</h3>
+                        <h1>Germán J.E. Dieser.</h1>
+                        <h2>Game Developer.</h2>
+                        <div class="redes">
+                            <a href="https://github.com/GDieser" target="_blank">
+                                <img src="icons/logo7.png" alt="GitHub" height="50px">
+                            </a>
+                            <a href="https://www.linkedin.com/in/german-dieser/" target="_blank">
+                                <img src="icons/logo11.png" alt="LinkedIn" height="50px">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="proyectos" class="secciones">
+            <div class="contenedor">
+                <h1 class="lang es active">🕹️ Mis Proyectos.</h1>
+                <h1 class="lang en">🕹️ My Projects.</h1>
+                <div>
+                    <div class="proyecto">
+                        <div class="recuadro-proyectos-unity">
+                            <iframe width="800" height="500"
+                                src="https://www.youtube.com/embed/l7FdIHgnBNI?si=GCgvGzm6_9vT8HDU"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <h1 class="lang es active">‣ Proyecto: Top Down Shooter - Unity 2D (En proceso) - <a
+                                    href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">Ver
+                                    repositorio</a></h1>
+                                    <h1 class="lang es active">‣ Probar DEMO - <a
+                                    href="TestDemo.html">DEMO</a></h1>
+                            <h1 class="lang en">‣ Project: Top Down Shooter - Unity 2D (In Progress) - <a
+                                    href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">View
+                                    repository</a></h1>
+                            <p class="lang es active">
+                                Proyecto realizado en Unity 2D, para Talento Tech, Shooter Top Down. Se implementaron
+                                Tilemaps para la construcción del entorno y sprites personalizados.
+                                Se utilizó el sistema de físicas 2D de Unity para gestionar colisiones, detección de
+                                impactos y comportamientos dinámicos. La iluminación del juego incorpora luces y sombras
+                                dinámicas, con el sistema de Universal Render Pipeline (URP).
+                                La lógica del juego fue desarrollada en C# y se integraron herramientas como compositing
+                                layers y Sorting Groups para una correcta organización visual. El sistema de colisiones,
+                                junto con scripts personalizados, permite una interacción fluida entre el jugador, los
+                                enemigos y el entorno.
+                            </p>
+                            <p class="lang en">
+                                Project created in Unity 2D for Talento Tech. It’s a Top Down Shooter that uses Tilemaps
+                                for building environments and custom sprites. Unity’s 2D physics system manages
+                                collisions, hit detection, and dynamic behaviors. The game lighting includes dynamic
+                                lights and shadows using the Universal Render Pipeline (URP). The game logic was
+                                developed in C#, and tools like compositing layers and Sorting Groups were used for
+                                proper visual organization. The collision system, together with custom scripts, ensures
+                                smooth interaction between the player, enemies, and environment.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer>
+        &copy;2025 Germán J.E. Dieser.
+    </footer>
+</body>
+
+</html>

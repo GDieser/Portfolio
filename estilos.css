@@ -8,6 +8,12 @@ body {
     font-family: sans-serif;
 }
 
+.body-unity{
+    background: linear-gradient(120deg, #141414, #29292b, #19191c, #27272b, #1d1d28);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+}
+
 /* pequeña animacion*/
 @keyframes gradientBG {
     0% {
@@ -377,12 +383,13 @@ a {
     margin-top: 2rem;
 }
 
-.recuadro-proyectos {
+
+.recuadro-proyectos-unity {
     margin-bottom: 1rem;
     flex: 1 1 30%;
     text-align: left;
-    background-color: rgb(0, 37, 219, 0.2);
-    box-shadow: 0px 0px 8px rgb(47, 93, 167, 0.6);
+    background-color: rgba(0, 0, 0, 0.416);
+    box-shadow: 0px 0px 8px rgba(13, 23, 39, 0.6);
 }
 
 .proyecto {
