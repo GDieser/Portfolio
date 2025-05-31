@@ -27,10 +27,7 @@
                             <li><a href="Unity.html">Unity</a></li>
                         </ul>
                         <ul class="lang en">
-                            <li><a href="#inicio">Home</a></li>
-                            <li><a href="#sobre-mi">About me</a></li>
-                            <li><a href="#proyectos">Projects</a></li>
-                            <li><a href="#contacto">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="Unity.html">Unity</a></li>
                         </ul>
                     </li>
@@ -83,17 +80,19 @@
                     <div class="proyecto">
                         <div class="recuadro-proyectos-unity">
                             <iframe width="800" height="500"
-                                src="https://www.youtube.com/embed/l7FdIHgnBNI?si=GCgvGzm6_9vT8HDU"
+                                src="https://www.youtube.com/embed/Itcx17NpBfM?si=OHC24wXjSB-4jrX1"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <h1 class="lang es active">‣ Proyecto: Top Down Shooter - Unity 2D (En proceso) - <a
                                     href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">Ver
                                     repositorio</a></h1>
-                                    <h1 class="lang es active">‣ Probar DEMO - <a
-                                    href="TestDemo.html">DEMO</a></h1>
-                                    <h1 class="lang es active">‣ Probar DEMO - <a
-                                    href="Unity/index.html">DEMO</a></h1>
+                            <h1 class="lang es active">‣ Probar DEMO - <a
+                                    href="https://topdown-unity.netlify.app/">DEMO</a></h1>
+
+                            <h1 class="lang en">‣ Probar DEMO - <a href="https://topdown-unity.netlify.app/">DEMO</a>
+                            </h1>
+
                             <h1 class="lang en">‣ Project: Top Down Shooter - Unity 2D (In Progress) - <a
                                     href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">View
                                     repository</a></h1>
@@ -124,6 +123,30 @@
             </div>
 
         </section>
+
+        <script>
+            function switchLang() {
+
+                var checkbox = document.getElementById("ckbTraduccion");
+
+                if (checkbox.checked) {
+                    document.querySelectorAll('.lang').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.' + 'en').forEach(el => {
+                        el.classList.add('active');
+                    });
+                }
+                else {
+                    document.querySelectorAll('.lang').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.' + 'es').forEach(el => {
+                        el.classList.add('active');
+                    });
+                }
+            }
+        </script>
 
 
     </main>
