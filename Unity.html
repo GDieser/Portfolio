@@ -6,46 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos de Unity</title>
     <link rel="stylesheet" href="estilos.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 </head>
 
 <body class="body-unity">
-    <header class="cabezera">
-        <div class="contenedor-cabezera">
-            <h1><a href="#inicio">GDieser🔥</a></h1>
+    <!--
+        <header class="cabezera">
+            <div class="contenedor-cabezera">
+                <h1><a href="#inicio">GDieser🔥</a></h1>
+                
+                <input type="checkbox" id="menu" />
+                <label for="menu" class="menu-icono">☰</label>
+                
+                <nav class="navbar">
+                    
+                    <ul>
+                        <li>
+                            <ul class="lang es active">
+                                <li><a href="index.html">Principal</a></li>
+                                <li><a href="Unity.html">Unity</a></li>
+                            </ul>
+                            <ul class="lang en">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="Unity.html">Unity</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <label class="switch">
+                                <span class="lang-label">Es / En</span>
+                                <input type="checkbox" id="ckbTraduccion" onchange="switchLang()">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                    
+                </nav>
+            </div>
+            
+        </header>
+        -->
 
-            <input type="checkbox" id="menu" />
-            <label for="menu" class="menu-icono">☰</label>
+    <main>
 
-            <nav class="navbar">
 
-                <ul>
-                    <li>
-                        <ul class="lang es active">
-                            <li><a href="index.html">Principal</a></li>
-                            <li><a href="Unity.html">Unity</a></li>
+        <div class="cabezera">
+            <nav class="navbar navbar-expand-lg bg-dark-opacity-25" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand"style="padding-left: 35px;"  href="#inicio">GDieser🕹️</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#proyectos">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contacto">Redes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="index.html">Principal🔥</a>
+                            </li>
                         </ul>
-                        <ul class="lang en">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="Unity.html">Unity</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <label class="switch">
-                            <span class="lang-label">Es / En</span>
-                            <input type="checkbox" id="ckbTraduccion" onchange="switchLang()">
-                            <span class="slider round"></span>
-                        </label>
-                    </li>
-                </ul>
 
+                    </div>
+
+                </div>
             </nav>
         </div>
 
-    </header>
-
-    <main>
         <section id="inicio" class="secciones">
             <div class="contenedor">
                 <div class="contenedor-inicio">
@@ -57,6 +98,8 @@
                         <h3 class="lang en">Hi!✋ I'm</h3>
                         <h1>Germán J.E. Dieser.</h1>
                         <h2>Game Developer.</h2>
+
+                        <!--
                         <div class="redes">
                             <a href="https://github.com/GDieser" target="_blank">
                                 <img src="icons/logo7.png" alt="GitHub" height="50px">
@@ -65,6 +108,7 @@
                                 <img src="icons/logo11.png" alt="LinkedIn" height="50px">
                             </a>
                         </div>
+                        -->
 
                     </div>
                 </div>
@@ -124,6 +168,41 @@
 
         </section>
 
+        <section id="contacto" class="secciones">
+            <div class="contenedor-contacto">
+                <h2 class="lang es active">📧 Mis Redes.</h2>
+                <h1 class="lang en">📧 Contact.</h1>
+
+                <div class="contenido-contacto">
+
+                    <div class="info-contacto">
+                        <p>
+                            <img src="icons/logo13.png" alt="Mail" height="30px">
+                            germandieser@gmail.com
+                        </p>
+                        <p>
+                            <img src="icons/logo12.png" alt="Ubicación" height="30px">
+                            Buenos Aires, Argentina.
+                        </p>
+
+                        <div class="redes">
+                            <a href="https://github.com/GDieser" style="color: #80808000;" target="_blank">
+                                <img src="icons/logo7.png" alt="GitHub" height="45px">
+                            </a>
+                            <a href="https://www.linkedin.com/in/german-dieser/" style="color: #80808000;"
+                                target="_blank">
+                                <img src="icons/logo11.png" alt="LinkedIn" height="45px">
+                            </a>
+                            <a href="https://www.instagram.com/ger_ed18/" style="color: #80808000;" target="_blank">
+                                <img src="icons/insta.png" alt="LinkedIn" height="45px">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <script>
             function switchLang() {
 
@@ -153,6 +232,13 @@
     <footer>
         &copy;2025 Germán J.E. Dieser.
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    
+    
 </body>
 
 </html>

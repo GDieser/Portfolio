@@ -9,6 +9,9 @@
     <title>Porfolio GDieser </title>
     <link rel="stylesheet" href="estilos.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
     <!--Para tener mas fuentes-->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
@@ -18,7 +21,8 @@
 <body>
 
 
-    <!--Parte superior -->
+    <!--Parte superior
+    
     <header class="cabezera">
         <div class="contenedor-cabezera">
             <h1><a href="#inicio">GDieser🔥</a></h1>
@@ -57,10 +61,45 @@
             </nav>
         </div>
 
-    </header>
+    </header>-->
 
     <!--El cuerpo general -->
     <main>
+
+
+        <div class="cabezera">
+            <nav class="navbar navbar-expand-lg bg-black-opacity-25" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" style="padding-left: 35px;" href="#inicio">GDieser🔥</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#proyectos">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contacto">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="Unity.html">Game-Dev🕹️</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
         <section id="inicio" class="secciones">
             <div class="contenedor">
                 <div class="contenedor-inicio">
@@ -81,14 +120,6 @@
                         <h3 class="lang en">Hi!✋ I'm</h3>
                         <h1>Germán J.E. Dieser.</h1>
                         <h2>Back-End Developer.</h2>
-                        <div class="redes">
-                            <a href="https://github.com/GDieser" target="_blank">
-                                <img src="icons/logo7.png" alt="GitHub" height="50px">
-                            </a>
-                            <a href="https://www.linkedin.com/in/german-dieser/" target="_blank">
-                                <img src="icons/logo11.png" alt="LinkedIn" height="50px">
-                            </a>
-                        </div>
 
                     </div>
                 </div>
@@ -100,76 +131,150 @@
             <div class="contenedor">
                 <h1 class="lang es active">📄 Sobre mí.</h1>
                 <h1 class="lang en">📄 About me.</h1>
-                <p class="lang es active">
-                    Soy desarrollador Back-End y estudiante de la Tecnicatura Universitaria en Programación en UTN-FRGP
-                    desde 2024. Me especializo en programación estructurada, POO y bases de datos con SQL Server.
-                </p>
-                <p class="lang en">
-                    I'm a Back-End developer and a student of the University Technician in Programming at UTN-FRGP since
-                    2024. I specialize in structured programming, OOP, and databases with SQL Server.
-                </p>
-                <p class="lang es active">
-                    Además de mi formación académica, me capacito de manera continua en plataformas como Platzi y estoy
-                    ampliando mis habilidades en el desarrollo y diseño de videojuegos con Unity.👾
-                </p>
-                <p class="lang en">
-                    In addition to my academic background, I continuously train on platforms like Platzi and I'm
-                    expanding my skills in game development and design using Unity.👾
-                </p>
-                <p class="lang es active">
-                    Soy un entusiasta de la informática y la tecnología, siempre buscando nuevos proyectos y
-                    oportunidades para seguir aprendiendo y aportar valor a cada equipo del que forme parte.
-                </p>
-                <p class="lang en">
-                    I'm passionate about computers and technology, always looking for new projects and opportunities to
-                    keep learning and add value to every team I'm part of.
-                </p>
-                <br>
-                <div>
-                    <h2 class="lang es active">Educación:</h2>
-                    <h2 class="lang en">Education:</h2>
-                    <div class="contenedor-educacion">
-                        <div class="recuadro-educacion">
-                            <h3 class="lang es active">✔ UTN-FRGP (2024-Presente)</h3>
-                            <h3 class="lang en">✔ UTN-FRGP (2024-Present)</h3>
-                            <ul class="lang es active">
-                                <li>Tecnicatura Universitaria en Programación</li>
-                            </ul>
-                            <ul class="lang en">
-                                <li>University Technician in Programming</li>
-                            </ul>
-                        </div>
-                        <div class="recuadro-educacion">
-                            <h3 class="lang es active">✔ Talento-Tech (2024-Presente)</h3>
-                            <h3 class="lang en">✔ Talento-Tech (2024-Present)</h3>
-                            <ul class="lang es active">
-                                <li>Programación con Python</li>
-                                <li>Desarrolo con Unity</li>
-                            </ul>
-                            <ul class="lang en">
-                                <li>Programming with Python</li>
-                                <li>Development with Unity</li>
-                            </ul>
-                        </div>
-                        <div class="recuadro-educacion">
-                            <h3 class="lang es active">✔ Platzi (Presente)</h3>
-                            <h3 class="lang en">✔ Platzi (Present)</h3>
-                            <ul class="lang es active">
-                                <li>Programacion Back-End con C#</li>
-                                <li>Ingles</li>
-                                <li>Unity</li>
-                            </ul>
-                            <ul class="lang en">
-                                <li>Back-End Programming with C#</li>
-                                <li>English</li>
-                                <li>Unity</li>
-                            </ul>
+
+                <div class="col-12 columnas">
+                    <p class="lang es active">
+                        Soy desarrollador Back-End y estudiante de la Tecnicatura Universitaria en Programación en
+                        UTN-FRGP
+                        desde 2024. Me especializo en el desarrollo back-end y bases de datos con SQL Server.
+                        <br><br>
+                        Además de mi formación académica, me capacito de manera continua en plataformas como Platzi
+                        y
+                        estoy
+                        ampliando mis habilidades en el desarrollo y diseño de videojuegos con Unity.👾
+                        <br><br>
+                        Soy un entusiasta de la informática y la tecnología, siempre buscando nuevos proyectos y
+                        oportunidades para seguir aprendiendo y aportar valor a cada equipo del que forme parte.
+                    </p>
+                    <p class="lang en">
+                        I'm a Back-End developer and a student of the University Technician in Programming at
+                        UTN-FRGP
+                        since
+                        2024. I specialize in back-end and databases with SQL Server.
+                    </p>
+                    <p class="lang en">
+                        In addition to my academic background, I continuously train on platforms like Platzi and I'm
+                        expanding my skills in game development and design using Unity.👾
+                    </p>
+                    <p class="lang en">
+                        I'm passionate about computers and technology, always looking for new projects and
+                        opportunities
+                        to
+                        keep learning and add value to every team I'm part of.
+                    </p>
+
+                    <div class="col-6">
+                        <div class="contenedor-educacion">
+                            <div class="recuadro-educacion">
+                                <h3 class="lang es active">✔ UTN-FRGP (2024-Presente)</h3>
+                                <h3 class="lang en">✔ UTN-FRGP (2024-Present)</h3>
+                                <ul class="lang es active">
+                                    <li>Tecnicatura Universitaria en Programación</li>
+                                </ul>
+                                <ul class="lang en">
+                                    <li>University Technician in Programming</li>
+                                </ul>
+                            </div>
+                            <div class="recuadro-educacion">
+                                <h3 class="lang es active">✔ Talento-Tech (2024-Presente)</h3>
+                                <h3 class="lang en">✔ Talento-Tech (2024-Present)</h3>
+                                <ul class="lang es active">
+                                    <li>Programación con Python</li>
+                                    <li>Desarrolo con Unity</li>
+                                </ul>
+                                <ul class="lang en">
+                                    <li>Programming with Python</li>
+                                    <li>Development with Unity</li>
+                                </ul>
+                            </div>
+                            <div class="recuadro-educacion">
+                                <h3 class="lang es active">✔ Platzi (Presente)</h3>
+                                <h3 class="lang en">✔ Platzi (Present)</h3>
+                                <ul class="lang es active">
+                                    <li>Programacion Back-End con C#</li>
+                                    <li>Ingles</li>
+                                    <li>Unity</li>
+                                </ul>
+                                <ul class="lang en">
+                                    <li>Back-End Programming with C#</li>
+                                    <li>English</li>
+                                    <li>Unity</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
                 </div>
 
                 <h2 class="lang es active">Cursos:</h2>
                 <h2 class="lang en">Courses:</h2>
+
+                <div class="text-center">
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                                aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                                aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+                                aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"
+                                aria-label="Slide 9"></button>
+
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/certificate/SQLMax.jpg" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/CSharp1.jpg" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/PrograMax.PNG" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/GitGithub.PNG" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/PlatziSQL.PNG" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/PlatziCsharp1.png" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/PlatziUnity.png" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/Unity2D.PNG" class="d-center w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/certificate/Python.PNG" class="d-center w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!--
                 <div class="contenedor-educacion">
                     <div class="recuadro-educacion">
                         <h4 class="lang es active">Bases de Datos SQL - <a href="https://maxiprograma.com/">
@@ -225,7 +330,8 @@
                     <h3 class="lang en">See more: <a
                             href="https://www.linkedin.com/in/german-dieser/details/certifications/">LinkedIn</a></h3>
                 </div>
-
+                -->
+                <br>
                 <div>
                     <h2 class="lang es active">Tecnologías:</h2>
                     <h2 class="lang en">Technologies:</h2>
@@ -283,57 +389,187 @@
             <div class="contenedor">
                 <h1 class="lang es active">🕹️ Proyectos.</h1>
                 <h1 class="lang en">🕹️ Projects.</h1>
-                <div class="cuadro-proyectos">
-                    <div class="proyecto">
-                        <div class="recuadro-proyectos">
-                            <iframe width="500" height="300"
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card text-center text bg-black bg-opacity-25 card-proyecto">
+                            <div class="card-header text-white">
+                                Plataforma de Cursos
+                            </div>
+                            <div class="card-body ">
+                                <iframe width="350" height="250"
+                                    src="https://www.youtube.com/embed/BV4AspAs6wc?si=N5gxNEE-t3RxOIVs"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <h6 class="card-text">Plataforma para la venta, administracion y cursado de para alumnos
+                                    y creadores de contenido, desarrollado con .Net y Sql.
+                                </h6>
+                                <a href="https://github.com/GDieser/tpc-equipo-12A" target="_blank">
+                                    <img src="icons/logo7.png" alt="GitHub" height="35px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-center text bg-black bg-opacity-25 card-proyecto">
+                            <div class="card-header text-white">
+                                Mollitiam 2D
+                            </div>
+                            <div class="card-body">
+                                <iframe width="350" height="250"
+                                    src="https://www.youtube.com/embed/Itcx17NpBfM?si=IcvO83jLC4rc8FaE"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <h6 class="card-text">Proyecto realizado en Unity 2D, para Talento Tech, Shooter Top
+                                    Down.
+                                </h6>
+                                <a href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">
+                                    <img src="icons/logo7.png" alt="GitHub" height="35px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-center text bg-black bg-opacity-25 card-proyecto">
+                            <div class="card-header text-white">
+                                To-Do Games
+                            </div>
+                            <div class="card-body">
+                                <img src="images/ToDo.PNG" style="height: 250px; width: 350px;" alt="">
+                                <h6 style="padding-top: 10px;" class="card-text">Pagina desarrollada con Boostrap para
+                                    poder cargar los juegos de los compañeros del curso de Unity 2D.
+                                </h6>
+                                <a href="https://github.com/GDieser/To-Do-Games" style="color: #80808000;"
+                                    target="_blank">
+                                    <img src="icons/logo7.png" alt="GitHub" height="35px">
+                                </a>
+                                <a href="https://todo-games.vercel.app/" target="_blank">
+                                    <img style="padding-left: 20px;" src="icons/web.png" alt="Web" height="35px">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card text-center text bg-black bg-opacity-25 card-proyecto">
+                            <div class="card-header text-white">
+                                E-commerce WinForms
+                            </div>
+                            <div class="card-body">
+                                <iframe width="350" height="250"
+                                    src="https://www.youtube.com/embed/6BsEM_OYYv8?si=Bi3fi4JOZol12vFH"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <h6 class="card-text">Aplicación de escritorio desarollada en C# con WinForms (.NET
+                                    Framework) para la
+                                    gestión de un articulos.
+                                </h6>
+                                <a href="https://github.com/GDieser/tp-winform-equipo-12A" target="_blank">
+                                    <img src="icons/logo7.png" alt="GitHub" height="35px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-center text bg-black bg-opacity-25 card-proyecto">
+                            <div class="card-header text-white">
+                                Gestion de GYM C++
+                            </div>
+                            <div class="card-body">
+                                <iframe width="350" height="250"
+                                    src="https://www.youtube.com/embed/eamG_5mSrFk?si=kO4_K8YoGy4IJqTG"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <h6 class="card-text">App de consola desarrollado en C++ para la gestion integral de un
+                                    gimnasio, clientes, pagos, rutina, entrenadores, etc.
+                                </h6>
+                                <a href="https://github.com/GDieser/TPI-PII-2024-Final-Aprobado-" target="_blank">
+                                    <img src="icons/logo7.png" alt="GitHub" height="35px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card text-center text bg-black bg-opacity-25 card-proyecto">
+                            <div class="card-header text-white">
+                                Embaucado Game
+                            </div>
+                            <div class="card-body">
+                                <iframe width="350" height="250"
+                                    src="https://www.youtube.com/embed/Xqp6Nh_WNFg?si=lY_ksDbIio0pnyub"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <h6 class="card-text">Proyecto final de un juego de cartas desarrollado en consola con
+                                    C++.
+                                </h6>
+                                <a href="https://github.com/GDieser/Embaucados-TPI-Remake" target="_blank">
+                                    <img src="icons/logo7.png" alt="GitHub" height="35px">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                    <div class="cuadro-proyectos">
+                        <div class="proyecto">
+                            <div class="recuadro-proyectos">
+                                <iframe width="500" height="300"
                                 src="https://www.youtube.com/embed/6BsEM_OYYv8?si=Bi3fi4JOZol12vFH"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <h1 class="lang es active">‣ Proyecto Programación 3 - <a
+                                <h1 class="lang es active">‣ Proyecto Programación 3 - <a
                                     href="https://github.com/GDieser/tp-winform-equipo-12A" target="_blank">Ver
                                     repositorio</a></h1>
-                            <h1 class="lang en">‣ Programming 3 Project - <a
-                                    href="https://github.com/GDieser/tp-winform-equipo-12A" target="_blank">View
-                                    repository</a></h1>
-                            <p class="lang es active">
-                                Aplicación de escritorio desarollada en C# con WinForms (.NET Framework) para la
-                                gestión de un articulos. Incluye alta, baja, modificación y consulta (CRUD) de
-                                diferentes artículos, con base de datos en SQL Server. El proyecto incorpora manejo de
-                                excepciones,
-                                conexión a base de datos y fue realizado en Visual Studio Community.
-                            </p>
-                            <p class="lang en">
-                                Desktop application developed in C# with WinForms (.NET Framework) for item management.
-                                It includes create, read, update, and delete (CRUD) operations for various items, using
-                                a SQL Server database. The project features exception handling, database connection, and
-                                was built in Visual Studio Community.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="proyecto">
+                                    <h1 class="lang en">‣ Programming 3 Project - <a
+                                        href="https://github.com/GDieser/tp-winform-equipo-12A" target="_blank">View
+                                        repository</a></h1>
+                                        <p class="lang es active">
+                                            Aplicación de escritorio desarollada en C# con WinForms (.NET Framework) para la
+                                            gestión de un articulos. Incluye alta, baja, modificación y consulta (CRUD) de
+                                            diferentes artículos, con base de datos en SQL Server. El proyecto incorpora manejo de
+                                            excepciones,
+                                            conexión a base de datos y fue realizado en Visual Studio Community.
+                                        </p>
+                                        <p class="lang en">
+                                            Desktop application developed in C# with WinForms (.NET Framework) for item management.
+                                            It includes create, read, update, and delete (CRUD) operations for various items, using
+                                            a SQL Server database. The project features exception handling, database connection, and
+                                            was built in Visual Studio Community.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="proyecto">
                         <div class="recuadro-proyectos">
                             <iframe width="500" height="300"
                                 src="https://www.youtube.com/embed/Xqp6Nh_WNFg?si=lY_ksDbIio0pnyub"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <h1 class="lang es active">‣ Proyecto Programación 1 - <a
+                                <h1 class="lang es active">‣ Proyecto Programación 1 - <a
                                     href="https://github.com/GDieser/Programacion-1-TPI-v0.1" target="_blank">Ver
                                     repositorio</a></h1>
                             <h1 class="lang en">‣ Programming 1 Project - <a
-                                    href="https://github.com/GDieser/Programacion-1-TPI-v0.1" target="_blank">View
-                                    repository</a></h1>
-                            <h1 class="lang es active">‣ Proyecto P1 Remake - <a
+                                href="https://github.com/GDieser/Programacion-1-TPI-v0.1" target="_blank">View
+                                repository</a></h1>
+                                <h1 class="lang es active">‣ Proyecto P1 Remake - <a
                                     href="https://github.com/GDieser/Embaucados-TPI-Remake" target="_blank">Ver
                                     repositorio</a></h1>
                             <h1 class="lang en">‣ P1 Remake Project - <a
-                                    href="https://github.com/GDieser/Embaucados-TPI-Remake" target="_blank">View
-                                    repository</a></h1>
-                            <p class="lang es active">
-                                Proyecto final de un juego de cartas llamado Embaucado, desarrollado en consola con C++,
+                                href="https://github.com/GDieser/Embaucados-TPI-Remake" target="_blank">View
+                                repository</a></h1>
+                                <p class="lang es active">
+                                    Proyecto final de un juego de cartas llamado Embaucado, desarrollado en consola con C++,
                                 aplicando programación estructurada, condicionales, ciclos, funciones y vectores. El
                                 proyecto abarca los conceptos básicos de programación y me permitió promocionar la
                                 materia.
@@ -351,25 +587,25 @@
                                 I also created a small remake using RLutil to include a graphical interface.
                             </p>
                         </div>
-
+                        
                     </div>
                     <div class="proyecto">
                         <div class="recuadro-proyectos">
                             <iframe width="500" height="300"
-                                src="https://www.youtube.com/embed/eamG_5mSrFk?si=BT-3gZiD61Wo4Ve4"
+                            src="https://www.youtube.com/embed/eamG_5mSrFk?si=BT-3gZiD61Wo4Ve4"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                            <h1 class="lang es active">‣ Proyecto Programación 2 - <a
+                                
+                                <h1 class="lang es active">‣ Proyecto Programación 2 - <a
                                     href="https://github.com/GDieser/TPI-PII-2024-Final-Aprobado-.git"
                                     target="_blank">Ver
                                     repositorio</a></h1>
                             <h1 class="lang en">‣ Programming 2 Project - <a
                                     href="https://github.com/GDieser/TPI-PII-2024-Final-Aprobado-.git"
                                     target="_blank">View repository</a></h1>
-                            <p class="lang es active">
-                                Proyecto final de un sistema de administración de gimnasio, una aplicación de consola
+                                    <p class="lang es active">
+                                        Proyecto final de un sistema de administración de gimnasio, una aplicación de consola
                                 con C++,
                                 aplicando programación orientada a objetos, punteros, memoria dinámica y manejo de
                                 archivos. El programa incluye menús para gerentes, alta, baja, modificación (CRUD) de
@@ -385,25 +621,25 @@
                                 using `.dat` files as a database.
                             </p>
                         </div>
-
+                        
                     </div>
                     <div class="proyecto">
                         <div class="recuadro-proyectos">
                             <iframe width="500" height="300"
-                                src="https://www.youtube.com/embed/l7FdIHgnBNI?si=GCgvGzm6_9vT8HDU"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            src="https://www.youtube.com/embed/l7FdIHgnBNI?si=GCgvGzm6_9vT8HDU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <h1 class="lang es active">‣ Proyecto: Top Down Shooter - Unity 2D (En proceso) - <a
                                     href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">Ver
                                     repositorio</a></h1>
                             <h1 class="lang en">‣ Project: Top Down Shooter - Unity 2D (In Progress) - <a
-                                    href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">View
-                                    repository</a></h1>
-                            <p class="lang es active">
-                                Proyecto realizado en Unity 2D, para Talento Tech, Shooter Top Down. Se implementaron
-                                Tilemaps para la construcción del entorno y sprites personalizados.
-                                Se utilizó el sistema de físicas 2D de Unity para gestionar colisiones, detección de
+                                href="https://github.com/GDieser/Talento-Tech---Unity-2D" target="_blank">View
+                                repository</a></h1>
+                                <p class="lang es active">
+                                    Proyecto realizado en Unity 2D, para Talento Tech, Shooter Top Down. Se implementaron
+                                    Tilemaps para la construcción del entorno y sprites personalizados.
+                                    Se utilizó el sistema de físicas 2D de Unity para gestionar colisiones, detección de
                                 impactos y comportamientos dinámicos. La iluminación del juego incorpora luces y sombras
                                 dinámicas, con el sistema de Universal Render Pipeline (URP).
                                 La lógica del juego fue desarrollada en C# y se integraron herramientas como compositing
@@ -424,13 +660,14 @@
 
                     </div>
                 </div>
+                -->
             </div>
 
         </section>
 
         <section id="contacto" class="secciones">
             <div class="contenedor-contacto">
-                <h1 class="lang es active">📧 Contacto.</h1>
+                <h2 class="lang es active">📧 Contacto.</h2>
                 <h1 class="lang en">📧 Contact.</h1>
 
                 <div class="contenido-contacto">
@@ -446,44 +683,49 @@
                         </p>
 
                         <div class="redes">
-                            <a href="https://github.com/GDieser" target="_blank">
-                                <img src="icons/logo7.png" alt="GitHub" height="50px">
+                            <a href="https://github.com/GDieser" style="color: #80808000;" target="_blank">
+                                <img src="icons/logo7.png" alt="GitHub" height="45px">
                             </a>
-                            <a href="https://www.linkedin.com/in/german-dieser/" target="_blank">
-                                <img src="icons/logo11.png" alt="LinkedIn" height="50px">
+                            <a href="https://www.linkedin.com/in/german-dieser/" style="color: #80808000;"
+                                target="_blank">
+                                <img src="icons/logo11.png" alt="LinkedIn" height="45px">
+                            </a>
+                            <a href="https://www.instagram.com/ger_ed18/" style="color: #80808000;" target="_blank">
+                                <img src="icons/insta.png" alt="LinkedIn" height="45px">
                             </a>
                         </div>
                     </div>
 
-                    <form id="form" action="https://formspree.io/f/xqaqanvd" method="POST" class="formulario-contacto">
-                        <label class="lang es active">
-                            Nombre:
-                            <div>
-                                <input type="text" name="nombre" placeholder="Tu nombre" required>
-                            </div>
-                        </label>
-                        <label class="lang en">
-                            Name:
-                            <div>
-                                <input type="text" name="nombre" placeholder="Your name" required>
-                            </div>
-                        </label>
-                        <label class="lang es active">
-                            Mail:
-                            <div>
-                                <input type="email" name="email" placeholder="Tu mail" required>
-                            </div>
-                        </label>
-                        <label class="lang en">
-                            Email:
-                            <div>
-                                <input type="email" name="email" placeholder="Your email" required>
-                            </div>
-                        </label>
-
-                        <label class="lang es active">
-                            Mensaje:
-                            <div>
+                    <!--
+                        <form id="form" action="https://formspree.io/f/xqaqanvd" method="POST" class="formulario-contacto">
+                            <label class="lang es active">
+                                Nombre:
+                                <div>
+                                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                                </div>
+                            </label>
+                            <label class="lang en">
+                                Name:
+                                <div>
+                                    <input type="text" name="nombre" placeholder="Your name" required>
+                                </div>
+                            </label>
+                            <label class="lang es active">
+                                Mail:
+                                <div>
+                                    <input type="email" name="email" placeholder="Tu mail" required>
+                                </div>
+                            </label>
+                            <label class="lang en">
+                                Email:
+                                <div>
+                                    <input type="email" name="email" placeholder="Your email" required>
+                                </div>
+                            </label>
+                            
+                            <label class="lang es active">
+                                Mensaje:
+                                <div>
                                 <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
                             </div>
                         </label>
@@ -497,8 +739,8 @@
                         <button class="lang es active" type="submit">Enviar</button>
                         <button type="submit" class="lang en">Send</button>
                     </form>
-
-                    <!--Codiog para poder evitar la redireccion a Formspree-->
+                    
+                    Codiog para poder evitar la redireccion a Formspree
                     <script>
                         //Asigno
                         const $form = document.querySelector('#form');
@@ -526,6 +768,7 @@
                             }
                         }//Gracias Leonidas!
                     </script>
+                    -->
 
                 </div>
             </div>
@@ -571,6 +814,31 @@
     <footer>
         &copy;2025 Germán J.E. Dieser.
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href.startsWith('#') && !href.startsWith('http')) {
+                    e.preventDefault();
+                    document.body.classList.add('page-transition-leave');
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 500); // mismo tiempo que la animación
+                }
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-transition-enter');
+        });
+    </script>
+
 </body>
 
 </html>
