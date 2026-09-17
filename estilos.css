@@ -745,6 +745,47 @@ footer {
 
 }
 
+#tutoriales {
+    border-bottom: 1px groove rgb(65, 68, 204, 0.4);
+    min-height: 50vh;
+    padding-top: 10px;
+    margin: 30px 0;
+}
+
+#tutoriales h1 {
+    font-size: 2em;
+    color: #e0e0e0;
+}
+
+.carrusel-videos-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 40px; 
+}
+
+.carrusel-borde {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 175, 219, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #000;
+}
+
+
+@media (max-width: 900px) {
+    #tutoriales h1 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    #tutoriales p {
+        text-align: center;
+    }
+    .carrusel-videos-contenedor {
+        max-width: 100%;
+        padding: 0 10px 40px 10px;
+    }
+}
+
 @media (max-width: 900px) {
 
     body {}
