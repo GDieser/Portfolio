@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>3 en raya | GDieser</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="cabezera">
+        <nav class="navbar navbar-expand-lg bg-black-opacity-25" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" style="padding-left: 35px;" href="index.html">GDieser🔥</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#inicio">Juego</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gamedev.html">Game-Dev🕹️</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <label class="switch">
+                                <span class="lang-label">Es / En</span>
+                                <input type="checkbox" id="ckbTraduccion" onchange="switchLang()">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+
+        <section id="inicio" class="secciones">
+            <div class="contenedor">
+
+                <h1 class="lang es active juego-titulo">🎮 3 en raya.</h1>
+                <h1 class="lang en juego-titulo">🎮 Tic-Tac-Toe.</h1>
+
+                <p class="lang es active juego-intro">
+                    Página de prueba del portafolio: un minijuego de 3 en raya hecho con HTML, CSS y JavaScript,
+                    sin librerías extra. Podés jugar de a dos o contra la máquina.
+                </p>
+                <p class="lang en juego-intro">
+                    Portfolio test page: a tic-tac-toe minigame built with plain HTML, CSS and JavaScript.
+                    You can play against a friend or against the computer.
+                </p>
+
+                <div class="juego-contenedor">
+
+                    <div class="juego-marcador">
+                        <span class="marcador-item marcador-x">X <strong id="puntosX">0</strong></span>
+                        <span class="marcador-item marcador-o">O <strong id="puntosO">0</strong></span>
+                        <span class="marcador-item">
+                            <span class="lang es active">Empates</span>
+                            <span class="lang en">Draws</span>
+                            <strong id="puntosEmpates">0</strong>
+                        </span>
+                    </div>
+
+                    <div class="juego-tablero" id="tablero" aria-label="Tablero de 3 en raya"></div>
+
+                    <p class="juego-estado" aria-live="polite">
+                        <span id="estadoEs" class="lang es active">Turno de X</span>
+                        <span id="estadoEn" class="lang en">X's turn</span>
+                    </p>
+
+                    <div class="juego-opciones">
+                        <button type="button" class="btn btn-outline-info" id="btnReiniciar">
+                            <span class="lang es active">Nueva partida</span>
+                            <span class="lang en">New game</span>
+                        </button>
+
+                        <div class="form-check form-switch mb-0">
+                            <input class="form-check-input" type="checkbox" role="switch" id="modoCPU">
+                            <label class="form-check-label text-light" for="modoCPU">
+                                <span class="lang es active">Jugar contra la máquina</span>
+                                <span class="lang en">Play against the computer</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <p class="juego-nota lang es active">
+                        X empieza siempre. La máquina juega con O.
+                    </p>
+                    <p class="juego-nota lang en">
+                        X always starts. The computer plays as O.
+                    </p>
+
+                    <a class="btn btn-sm btn-outline-secondary" href="index.html">
+                        <span class="lang es active">← Volver al portafolio</span>
+                        <span class="lang en">← Back to portfolio</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy;2026 Germán J.E. Dieser.
+    </footer>
+
+    <script>
+        /* ---------- 3 en raya: lógica ---------- */
+
+        const COMBINACIONES = [
+            [0, 1, 2], [3, 4, 5], [6, 7, 8],   // filas
+            [0, 3, 6], [1, 4, 7], [2, 5, 8],   // columnas
+            [0, 4, 8], [2, 4, 6]               // diagonales
+        ];
+
+        const tableroEl = document.getElementById('tablero');
+        const estadoEs = document.getElementById('estadoEs');
+        const estadoEn = document.getElementById('estadoEn');
+        const puntosX = document.getElementById('puntosX');
+        const puntosO = document.getElementById('puntosO');
+        const puntosEmpates = document.getElementById('puntosEmpates');
+        const modoCPU = document.getElementById('modoCPU');
+
+        const casillas = [];
+        let tablero = Array(9).fill('');
+        let turno = 'X';
+        let activa = true;
+        let bloqueado = false;
+        let contraMaquina = false;
+        const marcador = { X: 0, O: 0, empates: 0 };
+
+        // Crear las 9 casillas una sola vez
+        for (let i = 0; i < 9; i++) {
+            const boton = document.createElement('button');
+            boton.type = 'button';
+            boton.className = 'juego-casilla';
+            boton.dataset.indice = i;
+            boton.setAttribute('aria-label', 'Casilla ' + (i + 1));
+            boton.addEventListener('click', () => jugar(i));
+            tableroEl.appendChild(boton);
+            casillas.push(boton);
+        }
+
+        function textoEstado(es, en) {
+            estadoEs.textContent = es;
+            estadoEn.textContent = en;
+        }
+
+        function actualizarEstado() {
+            if (turno === 'X') {
+                textoEstado('Turno de X', "X's turn");
+            } else if (contraMaquina) {
+                textoEstado('Turno de la máquina (O)', 'Computer turn (O)');
+            } else {
+                textoEstado('Turno de O', "O's turn");
+            }
+        }
+
+        function colocar(indice, ficha) {
+            tablero[indice] = ficha;
+            const casilla = casillas[indice];
+            casilla.textContent = ficha;
+            casilla.classList.add(ficha.toLowerCase());
+            casilla.disabled = true;
+        }
+
+        function jugar(indice) {
+            if (!activa || bloqueado || tablero[indice] !== '') return;
+
+            colocar(indice, turno);
+            if (terminarSiCorresponde()) return;
+
+            turno = turno === 'X' ? 'O' : 'X';
+            actualizarEstado();
+
+            if (contraMaquina && turno === 'O') {
+                bloqueado = true;
+                setTimeout(turnoMaquina, 400);
+            }
+        }
+
+        function turnoMaquina() {
+            if (!activa) return;
+
+            const indice = elegirJugadaMaquina();
+            colocar(indice, 'O');
+            bloqueado = false;
+
+            if (terminarSiCorresponde()) return;
+
+            turno = 'X';
+            actualizarEstado();
+        }
+
+        // Heurística simple: ganar, bloquear, centro, esquina, cualquier lado.
+        function elegirJugadaMaquina() {
+            const ganar = buscarJugada('O');
+            if (ganar !== -1) return ganar;
+
+            const bloquear = buscarJugada('X');
+            if (bloquear !== -1) return bloquear;
+
+            if (tablero[4] === '') return 4;
+
+            const esquinas = [0, 2, 6, 8].filter(i => tablero[i] === '');
+            if (esquinas.length) return esquinas[Math.floor(Math.random() * esquinas.length)];
+
+            const libres = tablero.map((v, i) => v === '' ? i : -1).filter(i => i !== -1);
+            return libres[Math.floor(Math.random() * libres.length)];
+        }
+
+        function buscarJugada(ficha) {
+            for (const [a, b, c] of COMBINACIONES) {
+                const linea = [a, b, c];
+                const valores = linea.map(i => tablero[i]);
+                const propias = valores.filter(v => v === ficha).length;
+                const vacias = valores.filter(v => v === '').length;
+
+                if (propias === 2 && vacias === 1) {
+                    return linea[valores.indexOf('')];
+                }
+            }
+            return -1;
+        }
+
+        function ganador() {
+            for (const [a, b, c] of COMBINACIONES) {
+                if (tablero[a] && tablero[a] === tablero[b] && tablero[a] === tablero[c]) {
+                    return { ficha: tablero[a], linea: [a, b, c] };
+                }
+            }
+            return null;
+        }
+
+        function terminarSiCorresponde() {
+            const resultado = ganador();
+
+            if (resultado) {
+                activa = false;
+                marcarLinea(resultado.linea);
+                marcador[resultado.ficha]++;
+                pintarMarcador();
+
+                if (resultado.ficha === 'X') {
+                    textoEstado('¡Ganó X! 🎉', 'X wins! 🎉');
+                } else {
+                    textoEstado('¡Ganó O! 🎉', 'O wins! 🎉');
+                }
+                return true;
+            }
+
+            if (tablero.every(v => v !== '')) {
+                activa = false;
+                marcador.empates++;
+                pintarMarcador();
+                textoEstado('¡Empate! 🤝', "It's a draw! 🤝");
+                return true;
+            }
+
+            return false;
+        }
+
+        function marcarLinea(linea) {
+            linea.forEach(i => casillas[i].classList.add('ganadora'));
+        }
+
+        function pintarMarcador() {
+            puntosX.textContent = marcador.X;
+            puntosO.textContent = marcador.O;
+            puntosEmpates.textContent = marcador.empates;
+        }
+
+        function nuevaPartida() {
+            tablero = Array(9).fill('');
+            turno = 'X';
+            activa = true;
+            bloqueado = false;
+
+            casillas.forEach(casilla => {
+                casilla.textContent = '';
+                casilla.disabled = false;
+                casilla.classList.remove('x', 'o', 'ganadora');
+            });
+
+            actualizarEstado();
+        }
+
+        document.getElementById('btnReiniciar').addEventListener('click', nuevaPartida);
+
+        modoCPU.addEventListener('change', () => {
+            contraMaquina = modoCPU.checked;
+            nuevaPartida();
+        });
+
+        /* ---------- Traducción (misma convención que el resto del sitio) ---------- */
+
+        function switchLang() {
+            const ckb = document.getElementById('ckbTraduccion');
+
+            document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+            const idioma = ckb.checked ? 'en' : 'es';
+            document.querySelectorAll('.' + idioma).forEach(el => el.classList.add('active'));
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
