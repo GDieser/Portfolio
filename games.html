@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <title>3 en raya | GDieser</title>
+    <title>Minijuegos | GDieser</title>
     <link rel="stylesheet" href="estilos.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,7 +29,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#inicio">Juego</a>
+                            <a class="nav-link active" aria-current="page" href="#inicio">3 en raya</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#snake">Snake</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Portafolio</a>
@@ -55,17 +58,20 @@
         <section id="inicio" class="secciones">
             <div class="contenedor">
 
-                <h1 class="lang es active juego-titulo">🎮 3 en raya.</h1>
-                <h1 class="lang en juego-titulo">🎮 Tic-Tac-Toe.</h1>
+                <h1 class="lang es active juego-titulo">🎮 Minijuegos.</h1>
+                <h1 class="lang en juego-titulo">🎮 Mini games.</h1>
 
                 <p class="lang es active juego-intro">
-                    Página de prueba del portafolio: un minijuego de 3 en raya hecho con HTML, CSS y JavaScript,
-                    sin librerías extra. Podés jugar de a dos o contra la máquina.
+                    Página de prueba del portafolio: dos clásicos hechos con HTML, CSS y JavaScript, sin librerías
+                    extra. Elegí un juego y a jugar.
                 </p>
                 <p class="lang en juego-intro">
-                    Portfolio test page: a tic-tac-toe minigame built with plain HTML, CSS and JavaScript.
-                    You can play against a friend or against the computer.
+                    Portfolio test page: two classics built with plain HTML, CSS and JavaScript, no extra libraries.
+                    Pick a game and play.
                 </p>
+
+                <h2 class="lang es active juego-subtitulo">❌⭕ 3 en raya.</h2>
+                <h2 class="lang en juego-subtitulo">❌⭕ Tic-Tac-Toe.</h2>
 
                 <div class="juego-contenedor">
 
@@ -106,6 +112,75 @@
                     </p>
                     <p class="juego-nota lang en">
                         X always starts. The computer plays as O.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="snake" class="secciones">
+            <div class="contenedor">
+
+                <h2 class="lang es active juego-subtitulo">🐍 Snake.</h2>
+                <h2 class="lang en juego-subtitulo">🐍 Snake.</h2>
+
+                <p class="lang es active juego-intro">
+                    Comé las manzanas y crecé sin chocar contra las paredes ni contra tu propio cuerpo. Cada 5
+                    manzanas el juego se acelera un poco.
+                </p>
+                <p class="lang en juego-intro">
+                    Eat the apples and grow without hitting the walls or your own body. Every 5 apples the game
+                    speeds up a little.
+                </p>
+
+                <div class="juego-contenedor">
+
+                    <div class="juego-marcador">
+                        <span class="marcador-item marcador-x">
+                            <span class="lang es active">Puntaje</span>
+                            <span class="lang en">Score</span>
+                            <strong id="snakePuntos">0</strong>
+                        </span>
+                        <span class="marcador-item marcador-record">
+                            <span class="lang es active">Récord de la sesión</span>
+                            <span class="lang en">Session record</span>
+                            <strong id="snakeRecord">0</strong>
+                        </span>
+                    </div>
+
+                    <div class="snake-lienzo">
+                        <canvas id="snakeCanvas" width="400" height="400" role="img"
+                            aria-label="Tablero de Snake">Tu navegador no soporta canvas.</canvas>
+                        <div class="snake-overlay" id="snakeOverlay">
+                            <span id="snakeMsgEs" class="lang es active">Presioná «Nueva partida» para empezar</span>
+                            <span id="snakeMsgEn" class="lang en">Press “New game” to start</span>
+                        </div>
+                    </div>
+
+                    <div class="juego-opciones">
+                        <button type="button" class="btn btn-outline-info" id="btnSnakeNueva">
+                            <span class="lang es active">Nueva partida</span>
+                            <span class="lang en">New game</span>
+                        </button>
+                    </div>
+
+                    <div class="snake-dpad" aria-label="Controles de Snake">
+                        <button type="button" class="btn btn-outline-info snake-arriba" data-snake-x="0"
+                            data-snake-y="-1" aria-label="Arriba / Up">↑</button>
+                        <button type="button" class="btn btn-outline-info snake-izquierda" data-snake-x="-1"
+                            data-snake-y="0" aria-label="Izquierda / Left">←</button>
+                        <button type="button" class="btn btn-outline-info snake-abajo" data-snake-x="0"
+                            data-snake-y="1" aria-label="Abajo / Down">↓</button>
+                        <button type="button" class="btn btn-outline-info snake-derecha" data-snake-x="1"
+                            data-snake-y="0" aria-label="Derecha / Right">→</button>
+                    </div>
+
+                    <p class="juego-nota lang es active">
+                        Flechas o WASD en el teclado, o los botones de dirección.
+                    </p>
+                    <p class="juego-nota lang en">
+                        Arrow keys or WASD on the keyboard, or the direction buttons.
                     </p>
 
                     <a class="btn btn-sm btn-outline-secondary" href="index.html">
@@ -321,6 +396,203 @@
             const idioma = ckb.checked ? 'en' : 'es';
             document.querySelectorAll('.' + idioma).forEach(el => el.classList.add('active'));
         }
+    </script>
+
+    <script>
+        /* ---------- Snake: lógica ---------- */
+        (function () {
+            const canvas = document.getElementById('snakeCanvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const CELDAS = 20;
+            const CELDA = canvas.width / CELDAS;
+            const VELOCIDAD_INICIAL = 150;
+            const VELOCIDAD_MINIMA = 70;
+
+            const puntosEl = document.getElementById('snakePuntos');
+            const recordEl = document.getElementById('snakeRecord');
+            const overlay = document.getElementById('snakeOverlay');
+            const msgEs = document.getElementById('snakeMsgEs');
+            const msgEn = document.getElementById('snakeMsgEn');
+
+            let cuerpo;
+            let direccion;
+            let proximaDireccion;
+            let comida;
+            let puntos;
+            let record = 0;
+            let velocidad = VELOCIDAD_INICIAL;
+            let intervalo = null;
+            let estado = 'inicio';
+
+            function reiniciarEstado() {
+                cuerpo = [{ x: 10, y: 10 }, { x: 9, y: 10 }, { x: 8, y: 10 }];
+                direccion = { x: 1, y: 0 };
+                proximaDireccion = { x: 1, y: 0 };
+                comida = { x: 14, y: 10 };
+                puntos = 0;
+                velocidad = VELOCIDAD_INICIAL;
+                estado = 'inicio';
+                actualizarHud();
+                dibujar();
+            }
+
+            function nuevaPartida() {
+                clearInterval(intervalo);
+                reiniciarEstado();
+                comida = generarComida();
+                estado = 'jugando';
+                overlay.classList.add('oculto');
+                dibujar();
+                intervalo = setInterval(tick, velocidad);
+            }
+
+            function tick() {
+                if (estado !== 'jugando') return;
+
+                direccion = proximaDireccion;
+                const cabeza = { x: cuerpo[0].x + direccion.x, y: cuerpo[0].y + direccion.y };
+
+                if (cabeza.x < 0 || cabeza.x >= CELDAS || cabeza.y < 0 || cabeza.y >= CELDAS) {
+                    perder();
+                    return;
+                }
+
+                const come = comida && cabeza.x === comida.x && cabeza.y === comida.y;
+                const cuerpoAComparar = come ? cuerpo : cuerpo.slice(0, -1);
+
+                if (cuerpoAComparar.some(segmento => segmento.x === cabeza.x && segmento.y === cabeza.y)) {
+                    perder();
+                    return;
+                }
+
+                cuerpo.unshift(cabeza);
+
+                if (come) {
+                    puntos++;
+                    if (puntos > record) record = puntos;
+                    actualizarHud();
+                    comida = generarComida();
+
+                    const nuevaVelocidad = Math.max(VELOCIDAD_MINIMA,
+                        VELOCIDAD_INICIAL - Math.floor(puntos / 5) * 10);
+
+                    if (nuevaVelocidad !== velocidad) {
+                        velocidad = nuevaVelocidad;
+                        clearInterval(intervalo);
+                        intervalo = setInterval(tick, velocidad);
+                    }
+                } else {
+                    cuerpo.pop();
+                }
+
+                dibujar();
+            }
+
+            function perder() {
+                estado = 'perdido';
+                clearInterval(intervalo);
+                intervalo = null;
+                mostrarMensaje('¡Perdiste! Puntaje: ' + puntos, 'Game over! Score: ' + puntos);
+                dibujar();
+            }
+
+            function generarComida() {
+                const libres = [];
+                for (let y = 0; y < CELDAS; y++) {
+                    for (let x = 0; x < CELDAS; x++) {
+                        if (!cuerpo.some(s => s.x === x && s.y === y)) libres.push({ x, y });
+                    }
+                }
+                if (libres.length === 0) return null;
+                return libres[Math.floor(Math.random() * libres.length)];
+            }
+
+            function actualizarHud() {
+                puntosEl.textContent = puntos;
+                recordEl.textContent = record;
+            }
+
+            function mostrarMensaje(es, en) {
+                msgEs.textContent = es;
+                msgEn.textContent = en;
+                overlay.classList.remove('oculto');
+            }
+
+            function cambiarDireccion(x, y) {
+                if (estado !== 'jugando') return;
+                if (x === -direccion.x && y === -direccion.y) return;
+                proximaDireccion = { x, y };
+            }
+
+            function dibujar() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#08080d';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+                ctx.lineWidth = 1;
+                for (let i = 1; i < CELDAS; i++) {
+                    ctx.beginPath();
+                    ctx.moveTo(i * CELDA, 0);
+                    ctx.lineTo(i * CELDA, canvas.height);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(0, i * CELDA);
+                    ctx.lineTo(canvas.width, i * CELDA);
+                    ctx.stroke();
+                }
+
+                if (comida) {
+                    ctx.save();
+                    ctx.fillStyle = '#ff7bd5';
+                    ctx.shadowColor = '#ff7bd5';
+                    ctx.shadowBlur = 14;
+                    ctx.beginPath();
+                    ctx.arc(comida.x * CELDA + CELDA / 2, comida.y * CELDA + CELDA / 2,
+                        CELDA * 0.32, 0, Math.PI * 2);
+                    ctx.fill();
+                    ctx.restore();
+                }
+
+                cuerpo.forEach((segmento, i) => {
+                    ctx.save();
+                    if (i === 0) {
+                        ctx.fillStyle = '#7fe8ff';
+                        ctx.shadowColor = '#00AFDB';
+                        ctx.shadowBlur = 12;
+                    } else {
+                        ctx.fillStyle = '#00AFDB';
+                    }
+                    ctx.fillRect(segmento.x * CELDA + 2, segmento.y * CELDA + 2, CELDA - 4, CELDA - 4);
+                    ctx.restore();
+                });
+            }
+
+            const TECLAS = {
+                ArrowUp: [0, -1], ArrowDown: [0, 1], ArrowLeft: [-1, 0], ArrowRight: [1, 0],
+                w: [0, -1], s: [0, 1], a: [-1, 0], d: [1, 0],
+                W: [0, -1], S: [0, 1], A: [-1, 0], D: [1, 0]
+            };
+
+            document.addEventListener('keydown', evento => {
+                const tecla = TECLAS[evento.key];
+                if (!tecla || estado !== 'jugando') return;
+                evento.preventDefault();
+                cambiarDireccion(tecla[0], tecla[1]);
+            });
+
+            document.querySelectorAll('[data-snake-x]').forEach(boton => {
+                boton.addEventListener('click', () => {
+                    cambiarDireccion(Number(boton.dataset.snakeX), Number(boton.dataset.snakeY));
+                });
+            });
+
+            document.getElementById('btnSnakeNueva').addEventListener('click', nuevaPartida);
+
+            reiniciarEstado();
+        })();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"

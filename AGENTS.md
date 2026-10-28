@@ -6,7 +6,7 @@ Personal portfolio site by Germán J.E. Dieser. Static HTML/CSS + vanilla JS, no
 
 - `index.html` — main page: about, projects, certificates carousel, educational videos, contact.
 - `gamedev.html` — Unity/game-dev projects and 3D gallery.
-- `games.html` — Tic-Tac-Toe test page (vanilla JS). Isolated demo; not linked from the other pages.
+- `games.html` — arcade test page: Tic-Tac-Toe and Snake, both vanilla JS/canvas. Isolated demo; not linked from the other pages.
 - `estilos.css` — the only stylesheet, shared by all pages.
 - `icons/`, `images/` — static assets. `images/certificate/` feeds the carousel.
 

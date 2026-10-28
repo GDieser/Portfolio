@@ -971,7 +971,7 @@ footer {
 
 /* ===== 3 en raya (games.html) ===== */
 
-#inicio .juego-intro {
+.juego-intro {
     max-width: 800px;
     margin-bottom: 1rem;
     font-family: 'Gowun Dodum', sans-serif;
@@ -980,7 +980,22 @@ footer {
     color: #e0e0e0bd;
 }
 
-#inicio .juego-contenedor {
+.juego-subtitulo {
+    margin: 2.5rem 0 1rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.35rem;
+    line-height: 1.7;
+    color: #00AFDB;
+    text-align: center;
+}
+
+#inicio .juego-subtitulo {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.35rem;
+    color: #00AFDB;
+}
+
+.juego-contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1121,7 +1136,7 @@ footer {
         font-size: clamp(1.25rem, 6vw, 2em);
     }
 
-    #inicio .juego-contenedor {
+    .juego-contenedor {
         margin-top: 1rem;
     }
 
@@ -1132,5 +1147,99 @@ footer {
 
     .juego-estado {
         font-size: 0.7rem;
+    }
+}
+
+/* Snake */
+
+.marcador-record strong {
+    color: #ffd166;
+}
+
+.snake-lienzo {
+    position: relative;
+    width: min(90vw, 400px);
+}
+
+.snake-lienzo canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 25px rgba(0, 175, 219, 0.25);
+    background-color: #08080d;
+    image-rendering: pixelated;
+}
+
+.snake-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1.25rem 1rem 1rem;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.25);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.75rem;
+    line-height: 1.9;
+    color: #e0e0e0;
+    text-align: center;
+    text-shadow: 0 2px 6px #000;
+}
+
+.snake-overlay .lang {
+    padding: 0.7rem 0.9rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.snake-overlay.oculto {
+    display: none;
+}
+
+.snake-dpad {
+    display: grid;
+    grid-template-columns: repeat(3, 46px);
+    grid-template-rows: repeat(3, 46px);
+    gap: 6px;
+    justify-content: center;
+}
+
+.snake-dpad .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.snake-arriba {
+    grid-area: 1 / 2;
+}
+
+.snake-izquierda {
+    grid-area: 2 / 1;
+}
+
+.snake-abajo {
+    grid-area: 3 / 2;
+}
+
+.snake-derecha {
+    grid-area: 2 / 3;
+}
+
+@media (max-width: 900px) {
+    .juego-subtitulo {
+        font-size: 1.05rem;
+    }
+
+    .snake-overlay {
+        font-size: 0.62rem;
     }
 }
